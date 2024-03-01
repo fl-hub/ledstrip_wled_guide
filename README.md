@@ -4,7 +4,7 @@ A guide on how to build a controller for you LEDs and control it using Wled.
 <!-- description -->
 <div>
   <p>
-    Huge shout-out to <a target="_blank" href="https://github.com/Aircoookie/WLED">Aircoookie</a> and his <a target="_blank" href="https://github.com/Aircoookie/WLED">WLED repository</a>. You should definetely go check his repository. 
+    Huge shout-out to <a target="_blank" href="https://github.com/Aircoookie">Aircoookie</a> and his <a target="_blank" href="https://github.com/Aircoookie/WLED">WLED repository</a>. You should definetely go check his repository. 
   </p>
   <p>
     This guide summarizes how I build a controller for my LED strip and gives you step by step DIY instructions how to do the same.
@@ -24,10 +24,9 @@ Index
   <li><a href="#what-you-need">What you need</a></li>
   <li><a href="#building">How to build the controller</a></li>
   <li><a href="#wled">Install WLED</a></li>
-    <dl><a href="windows">Windows</a></dl>
-    <dl><a href="linux">Linux</a></dl>
-    <dl><a href="Max">MacOS</a></dl>
-
+  <li><a href="#config">Configurations</a></li>
+  <li><a href="#resources">Resources</a></li>
+  <li><a href="#disclaimer">Disclaimer</a></li>
 </ul>
 
 <!-- List of components needed -->
@@ -100,22 +99,47 @@ ADD diagram
   <li>Congrats! Your microcontroller is build and ready, now you can install WLED on the ESP32.</li>
 
   ADD figure of my device
-
 </ol>  
+You will need to remove the ESP32 from the board and procede with the WLED installation. 
 
+<!-- Installation -->
 <h4 id="wled">How to install WLED</h4>
-<h5 id="windows">Windows</h5>
+Remove the ESP32 from the board and plug your ESP32 to your computer via USB. 
+If you are on <b>Windows</b> you will have to install the right drivers for your ESP microcontroller. Refer to this page to download them and by searching for your model: <a target="_blank" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">Espressif Website ESP32></a>
+If you are on <bold>Linux</bold> or <b>MacOS</b> the VCP drivers are usually installed. 
+You can install WLED by opening the wled install page on a chromium browser and following the steps indicated: <a target="_blank" href="https://install.wled.me/">Install.WLED</a>
+Note: You will need to know which COM port is your ESP32. If you do not know, follow the steps on the Espressif website above. 
+
+Once you went through all the steps, you can control your ESP32 device via the address it defined on the browser. 
+
+You can also download the wled app and control it from your phone.
+
+<!-- Configs -->
+<h4 id="config">Configurations</h4>
+<p>In your wled app or on the browser page go to <b>Settings > LED Preferences</b> and make sure you have the following settings configured:</p>
+<li><b>Maximum current:</b> Keep it less than 1A (850 mA is the default)</li>
+<li><b>Enable automatic brightness limiter:</b> Enable (you can disable it for extra brightness but it might damage the leds)</li>
+<li><b>LED voltage:</b>5 V</li>
+<li><b>LED outputs:</b> select your leds</li>
+<li><b>Color Order:</b>some trial and error here. Try each option until you get the right order</li>
+<li><b>Length:</b>Put the number of LEDs you have (e.g. 1 strip with 30 leds, put 30. 2 strips with 30 each, put 60</li>
+<li><b>GPIO:</b>It should be automatically set to the GPIO you are using on the ESP32. If not, correct it. In this example I used the GPIO4</li>
+
+<!-- Resources -->
+<h4 id="disclaimer">Resources</h4>
+<p><a target="_blank" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html"><b>Esspressif Website:</b></a> Check it for drivers and further data on your microcontroller device</p>
+<p><a target="_blank" href="https://kno.wled.ge/"><b>WLED website:</b></a> All schematics, basics, tutorials and links to the project from Aircoookie</p>
+<p></ü><a target="_blank" href="https://install.wled.me/"><b>Install.WLED:</b></a> WLED installation website</p>
+<p><a target="_blank" href="https://github.com/Aircoookie/WLED"><b>WLED github repository</b></a></p>
+<p><a target="_blank" href="https://www.youtube.com/watch?v=_wZEJPShvmI"><b>Makers Mashup channel:</b></a> Video tutorial similar to this project. They added a microphone and a 3D printed case. </p>
+<p><a target="_blank" href="https://youtu.be/6rmErwU5E-k?si=IwWvO1K9KMLs7F1D"><b>Soldering tutorial:</b></a> First time soldering? Check this crash course from vermy.</p>
+
+<!-- Disclaimer -->
+<h4 id="disclaimer">Disclaimer</h4>
+I do not own the code for the WLED app. All the work and effort belongs to Christian Schwinne (Aircoookie) to whom I thank for the creation of WLED. 
 
 
-<h5 id="linux">Linux</h5>
-<p>On linux you </p>
 
-
-<h5 id="Max">MacOS</h5>
-
-
-  
-</ol>
 
 
 
