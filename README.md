@@ -20,12 +20,19 @@ Index
 <h4>
   Table of Contents
 </h4>
-  - [What you need](#what-you-need)
+<ul>
+  <li><a href="#what-you-need">What you need</a></li>
+  <li><a href="#building">How to build the controller</a></li>
+  <li><a href="#wled">Install WLED</a></li>
+    <dl><a href="windows">Windows</a></dl>
+    <dl><a href="linux">Linux</a></dl>
+    <dl><a href="Max">MacOS</a></dl>
 
-
+</ul>
 
 <!-- List of components needed -->
-<h4>What you need</h4>
+<h4 id="what-you-need">What you need</h4>
+<p>Here is a list of the different components and equipment you will need to build the controller.</p>
 <ul>
   <li>
     <a target="_blank" href="https://www.amazon.de/dp/B0CH9JYNMH?psc=1&_encoding=UTF8&tag=flhub-21&linkCode=ur2&linkId=5e8e8686c2825231051a55fb24c847f2&camp=1638&creative=6742">ESP32</a><a target="_blank" href="https://www.amazon.de/dp/B01CDTEFAQ?psc=1&_encoding=UTF8&tag=flhub-21&linkCode=ur2&linkId=b3f8b093f5ddb8f3de39363ae62fabd5&camp=1638&creative=6742">BTF lighting LED strip</a>
@@ -71,6 +78,45 @@ Index
 <h6>
   Disclaimer: Some of the links above are affiliate links. This means that, at zero cost to you, I will earn an affiliate commission if you click through the link and finalize a purchase.
 </h6>
+
+<!-- Instructions -->
+<h4 id="building">How to build the controller</h4>
+<ol>
+  <li>Prepare all the components and heat your soldering iron.</li>
+  <li>Prepare the ESP32 by adding the header pins. Technically you could also solder your ESP32 directly to the breadboard, but by adding the header pins you can always remove it and easily reuse it for other projects. It also has the advantage of making it possible to pass cables under it and makes the soldering of the cables easier. If youd decide not to use the header pins, I advise you to do this step at the end.</li>
+  <li>Solder the header pin connectors to the breadboard. Do it while they are connected to the ESP32 to make sure you get the position right. Solder it closer to one of the sides of the breadboard, so you have enough space for the DC plug on the other side.</li>
+  <li>Now we will connect the power rails to the ground and the 5V input on the ESP32. Check the diagram below to detect the pins where the connection needs to be made. To simplify, use a red cable going from the positive rail to the 5V pin and a black (or white) cable to the Ground pin. For simplicity, use the end of one of the rails. Position 2 or 3 would be great. Let's leave position one for the DC plug adapter.</li>
+
+ADD diagram
+  
+  <li>Now, we connect the capacitor to the power rails. Make sure you get the positive to the positive and negative to the negative. Swapping the polarity can cause the capacitor to <a target="_blank" href="https://youtu.be/xjchpcL63Zo?si=n7bRZdduHTCb5K_G&t=18">explode</a>.</li>
+  <li>We can now solder two cables (do one red, one black for simplicity) to position 1 or the power rails. Make sure you use the right lenght for the cables. The other end go into the positive and negative position of the DC plug adapter.</li>
+  <li>At this stage, I would make a pause on the microcontroller and turn to the box. I used a very simple electronic junction box with 10x6x2.5 cm. Before you can put the microcontroller inside, you will have to drill a hole for the DC plug in one end and a smaller whole to pass the 3 pin female LED strip connector. I made a small circular whole for this and left the connector part outside of the box as it was easy to drill a hole than to cut the perfect square for the connector. **Make sure you have all the precautions while drilling and that you measure the position and size of the necessary hole**.</li>
+  <li>Before passing the 3 pin connector through its hole in the case and solder it in place I decided to add a hear shrink tube around it for better looks and extra protection as part of this cable would hang out of my case. Do not wrap the tube around the whole cable as you still need enough space for maneuvering it inside the case while soldering. They go to different places in the breadboard.</li>
+  <li>Heat the tube with a hot gun or a hair drier (good home solutions).</li>
+  <li>You can now pass it through its whole in the case. Afterwards, you will have to solder the positive (red cable) and negative (whie cable) to their positions on the breadboard. Solder it to the other end of the rail (e.g. position 30). Its important that at the end the power rail has the following order of connections DC plug > ESP32 > Capacitor > LED.</li>
+  <li>After soldering the power cables, now you can solder the data cable (green cable) to the breadboard on the GPIO4 position of the ESP32. Check the diagram. Note, you will have to remove the ESP32 for this step so you can access the breadboard.</li>
+  <li>You can now put the board in place inside your case.</li>
+  <li>Congrats! Your microcontroller is build and ready, now you can install WLED on the ESP32.</li>
+
+  ADD figure of my device
+
+</ol>  
+
+<h4 id="wled">How to install WLED</h4>
+<h5 id="windows">Windows</h5>
+
+
+<h5 id="linux">Linux</h5>
+<p>On linux you </p>
+
+
+<h5 id="Max">MacOS</h5>
+
+
+  
+</ol>
+
 
 
 
