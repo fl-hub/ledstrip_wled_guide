@@ -15,11 +15,9 @@ A guide on how to build a controller for you LEDs and control it using Wled.
 </div>
 
 <!-- Index-->
-
-Index
-<h4>
+<h2>
   Table of Contents
-</h4>
+</h2>
 <ul>
   <li><a href="#what-you-need">What you need</a></li>
   <li><a href="#building">How to build the controller</a></li>
@@ -30,7 +28,7 @@ Index
 </ul>
 
 <!-- List of components needed -->
-<h4 id="what-you-need">What you need</h4>
+<h2 id="what-you-need">What you need</h2>
 <p>Here is a list of the different components and equipment you will need to build the controller.</p>
 <ul>
   <li>
@@ -79,7 +77,7 @@ Index
 </h6>
 
 <!-- Instructions -->
-<h4 id="building">How to build the controller</h4>
+<h2 id="building">How to build the controller</h2>
 <ol>
   <li>Prepare all the components and warm up your soldering iron.</li>
   <li>Prepare the ESP32 by adding the header pins. Technically you could also solder your ESP32 directly to the breadboard, but by adding the header pins you can always remove it and easily reuse it for other projects. It also has the advantage of making it possible to pass cables under it and makes the soldering of the cables easier. If you decide not to use the header pins, I advise you to do this step after you finish all other connections.</li>
@@ -123,7 +121,7 @@ Index
 <p><b>Note:</b> When connecting the LEDs, make attention to the arrows printed on the strip. It tells you the direction of the data.</p>
 
 <!-- Installation -->
-<h4 id="wled">How to install WLED</h4>
+<h2 id="wled">How to install WLED</h2>
 Remove the ESP32 from the board and plug your ESP32 to your computer via USB. 
 If you are on <b>Windows</b> you will have to install the right drivers for your ESP microcontroller. Refer to this page to download them: <a target="_blank" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html">Espressif Website ESP32></a>
 If you are on <bold>Linux</bold> or <b>MacOS</b> the VCP drivers are usually installed. 
@@ -135,18 +133,18 @@ Once you went through all the steps, you can control your ESP32 device via the d
 You can also download the WLED app and control it from your phone.
 
 <!-- Configs -->
-<h4 id="config">Configurations</h4>
-<p>In your wled app or on the browser page go to <b>Settings > LED Preferences</b> and make sure you have the following settings configured:</p>
+<h2 id="config">Configurations</h2>
+<p>In your WLED app or on the browser page go to <b>Settings > LED Preferences</b> and make sure you have the following settings configured:</p>
 <li><b>Maximum current:</b> Keep it less than 1A (850 mA is the default)</li>
 <li><b>Enable automatic brightness limiter:</b> Enable (you can disable it for extra brightness but it might damage the leds)</li>
-<li><b>LED voltage:</b>5 V</li>
+<li><b>LED voltage:</b> 5 V</li>
 <li><b>LED outputs:</b> select your leds</li>
 <li><b>Color Order:</b>some trial and error here. Try each option until you get the right order</li>
 <li><b>Length:</b>Put the number of LEDs you have (e.g. 1 strip with 30 leds, put 30. 2 strips with 30 each, put 60</li>
 <li><b>GPIO:</b>It should be automatically set to the GPIO you are using on the ESP32. If not, correct it. In this example I used the GPIO4</li>
 
 <!-- Resources -->
-<h4 id="disclaimer">Resources</h4>
+<h2 id="disclaimer">Resources</h2>
 <p><a target="_blank" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/establish-serial-connection.html"><b>Esspressif Website:</b></a> Check it for drivers and further data on your microcontroller device</p>
 <p><a target="_blank" href="https://kno.wled.ge/"><b>WLED website:</b></a> All schematics, basics, tutorials and links to the project from Aircoookie</p>
 <p></ü><a target="_blank" href="https://install.wled.me/"><b>Install.WLED:</b></a> WLED installation website</p>
@@ -155,7 +153,7 @@ You can also download the WLED app and control it from your phone.
 <p><a target="_blank" href="https://youtu.be/6rmErwU5E-k?si=IwWvO1K9KMLs7F1D"><b>Soldering tutorial:</b></a> First time soldering? Check this crash course from vermy.</p>
 
 <!-- Disclaimer -->
-<h4 id="disclaimer">Disclaimer</h4>
+<h2 id="disclaimer">Disclaimer</h2>
 I do not own the code for the WLED app. All the work and effort belongs to Christian Schwinne (Aircoookie) to whom I thank for the creation of WLED. 
 
 
