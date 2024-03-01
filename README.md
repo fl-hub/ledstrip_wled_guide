@@ -2,11 +2,30 @@
 A guide on how to build a controller for you LEDs and control it using Wled. 
 
 <!-- description -->
-Huge shout-out to Aircookie and his Wled rep. You should definetely go check his Wled repository.
-This guide summarizes how I build a controller for my LED strip and gives you step by step DIY instructions how to do the same. 
+<div>
+  <p>
+    Huge shout-out to <a target="_blank" href="https://github.com/Aircoookie/WLED">Aircoookie</a> and his <a target="_blank" href="https://github.com/Aircoookie/WLED">WLED repository</a>. You should definetely go check his repository. 
+  </p>
+  <p>
+    This guide summarizes how I build a controller for my LED strip and gives you step by step DIY instructions how to do the same.
+  </p>
+  <p>
+    If you are more of a visual person you can also check the guide on <a target="_blank" href="https://www.youtube.com/watch?v=_wZEJPShvmI">Makers Mashup</a> channel.
+  </p>
+</div>
+
+<!-- Index-->
+
+Index
+<h4>
+  Table of Contents
+</h4>
+  - [What you need](#what-you-need)
+
+
 
 <!-- List of components needed -->
-<h4>What you need:</h4>
+<h4>What you need</h4>
 <ul>
   <li>
     <a target="_blank" href="https://www.amazon.de/dp/B0CH9JYNMH?psc=1&_encoding=UTF8&tag=flhub-21&linkCode=ur2&linkId=5e8e8686c2825231051a55fb24c847f2&camp=1638&creative=6742">ESP32</a><a target="_blank" href="https://www.amazon.de/dp/B01CDTEFAQ?psc=1&_encoding=UTF8&tag=flhub-21&linkCode=ur2&linkId=b3f8b093f5ddb8f3de39363ae62fabd5&camp=1638&creative=6742">BTF lighting LED strip</a>
